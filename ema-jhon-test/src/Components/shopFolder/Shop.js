@@ -20,11 +20,13 @@ const Shop = () => {
         total = total+parseInt(product.price);
      }
      let vat = parseInt(total*0.04);
-     let grandTotal = vat+total+12;
+     let grandTotal = vat+total;
+    
      let Shipping =0;
      if(total>0)
      {
         Shipping = 12;
+        grandTotal = grandTotal+12;
      }
 
 
