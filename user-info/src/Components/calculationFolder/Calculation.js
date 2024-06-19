@@ -1,11 +1,10 @@
 import React from 'react';
-import user from './user.css';
-
-const User = (props) => {
-const {id,name,image,salary,email,phone}=props.alldata;
-
+import calculation from './calculation.css';
+const Calculation = (props) => {
+    const{id,name,image,phone,email,salary} = props.allDetails;
     return (
         <div>
+             <div>
             <div className='image-and-details-container'>
                     <div className='hello'>
                         <div className='image-div'>
@@ -17,12 +16,14 @@ const {id,name,image,salary,email,phone}=props.alldata;
                             <h2>{name}</h2>
                             <p>Phone: {phone}</p>
                             <p>Email: {email}</p>
-                            <h4>Salary: {salary}</h4>
+                            <h4>Salary: ${salary}</h4>
+                            <button onClick={()=>props.handleAddCart(props.allDetails)} >Add User</button>
                         </div>
                     </div>
             </div>
         </div>
+        </div>
     );
 };
 
-export default User;
+export default Calculation;
