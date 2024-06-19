@@ -1,10 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React, { useEffect, useState } from 'react';
+import data from './fakeDataFolder/data.json';
+import User from './Components/userFolder/User';
 function App() {
+
   return (
     <div>
-      <p>ki re mama</p>
+     {
+      data.map(datum=>
+      <User alldata={datum}></User>
+      )
+     }
     </div>
   );
 }

@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+}
+.image-and-details-container{
+display: flex;
+margin: 0 auto;
+padding: 5px;
+height: 300px;
+width: 900px;
+border-bottom: 1px solid goldenrod;
+margin-bottom: 10px;
+background-color: #ffffff;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.hello{display: flex; align-items: center;}
+.image-div{
+    height: 280px;
+    width: 300px;
+   
+}
+.details-div{
+    width: 590px;
+    justify-content: center;
+    text-align: center;
+
+}
+.hello2{display: flex;
+align-items: center;
+justify-content: center;
+}

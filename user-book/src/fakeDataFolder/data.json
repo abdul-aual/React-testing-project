@@ -1,0 +1,82 @@
+[
+  {
+  "id": 1,
+  "name": "Kawaki Nipra",
+  "phone": "017171717236",
+  "email": "abc@gmail.com",
+  "salary": 124354,
+  "image":"images/image1.jpg"
+},
+{
+  "id": 2,
+  "name": "Bill Gates",
+  "phone": "67435843586",
+  "email": "billi@gmail.com",
+  "salary": 34365,
+  "image":"images/image2.jpg"
+},
+{
+  "id": 3,
+  "name": "Mark Zucarbarg",
+  "phone": "+1717236",
+  "email": "meta@yahoo.com",
+  "salary": 2346,
+  "image":"images/image3.jpg"
+},
+{
+  "id": 4,
+  "name": "Elon Mask",
+  "phone": "+8807236",
+  "email": "tesla@gmail.com",
+  "salary": 13224354,
+  "image":"images/image4.jpg"
+},
+{
+  "id": 5,
+  "name": "Leo Messi",
+  "phone": "+99834765487",
+  "email": "leo-messi@gmail.com",
+  "salary": 9198732124354,
+  "image":"images/image5.jpg"
+},
+{
+  "id": 6,
+  "name": "Cristiano Ronaldo",
+  "phone": "+0071717236",
+  "email": "cr7@gmail.com",
+  "salary": 454354,
+  "image":"images/image6.jpg"
+},
+{
+  "id": 7,
+  "name": "Neymar JR.",
+  "phone": "+0986854",
+  "email": "bra@gmail.com",
+  "salary": 435454,
+  "image":"images/image7.jpg"
+},
+{
+  "id": 8,
+  "name": "Luis Suarez",
+  "phone": "+7171717236",
+  "email": "su@yahoo.com",
+  "salary": 76243,
+  "image":"images/image8.jpg"
+},
+{
+  "id": 9,
+  "name": "Mbappe",
+  "phone": "+354243236",
+  "email": "mabappe-bitis@gmail.com",
+  "salary": 4674356,
+  "image":"images/image9.jpg"
+},
+{
+  "id": 10,
+  "name": "Diego Armando Maradona",
+  "phone": "+9907543",
+  "email": "maradona-argentina@gmail.com",
+  "salary": 1332434,
+  "image":"images/image10.jpg"
+}
+]
