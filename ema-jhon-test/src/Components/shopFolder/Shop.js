@@ -43,7 +43,7 @@ const Shop = () => {
             </div>
             <div className='cart-container' >
                 <div className='order-summary' >
-                    <h3>Order summary</h3>
+                    <h3 className='text-primary'>Order summary</h3>
                     <p>Items ordered: {cart.length} </p>
                 </div>
                 <div className='order-calculation'>

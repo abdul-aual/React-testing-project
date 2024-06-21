@@ -13,7 +13,7 @@ const Product = (props) => {
                 <p><small>seller: {seller}</small></p>
                 <p style={{fontWeight:'bold'}}>Price: ${price}</p>
                 <p><small>Only {stock} left in stock - Order soon</small></p>
-                <button className='btn' onClick={()=>props.handleAddCart(props.productDetails)} >add to cart</button>
+                <button className='btn-mama' onClick={()=>props.handleAddCart(props.productDetails)} >add to cart</button>
             </div>
             
         </div>
