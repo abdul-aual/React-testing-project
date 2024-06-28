@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import shop from './shop.css'; 
+import './shop.css'; 
 import Product from '../productFolder/Product';
 
 const Shop = () => {
