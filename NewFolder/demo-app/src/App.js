@@ -23,9 +23,6 @@ function App() {
             </li>
           </ul>
         </nav>
-
-        {/* A <Routes> element looks through its children <Route> elements
-            and renders the first one that matches the current URL. */}
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/users" element={<Users />} />
