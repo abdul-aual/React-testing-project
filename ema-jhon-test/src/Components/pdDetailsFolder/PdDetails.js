@@ -1,4 +1,3 @@
-// import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Product from '../productFolder/Product';
 import { useEffect, useState } from 'react';
@@ -37,7 +36,7 @@ const PdDetails = () => {
 
     return (
         <div>
-            <Product productDetails={product} />
+            <Product showAddToCart={false} productDetails={product} />
         </div>
     );
 };

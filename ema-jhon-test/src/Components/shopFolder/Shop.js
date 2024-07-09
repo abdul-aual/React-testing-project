@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './shop.css'; 
 import Product from '../productFolder/Product';
+import { Link } from 'react-router-dom';
 
 const Shop = () => {
      const [data, setData] =useState([]);
@@ -34,7 +35,7 @@ const Shop = () => {
         <div className='shop-container'>
             <div className='product-container' >
                 {
-                        data.map(datum=><Product 
+                        data.map(datum=><Product showAddToCart={true}
                             productDetails={datum} 
                             handleAddCart={handleAddCart}>
 
@@ -64,7 +65,7 @@ const Shop = () => {
                     </div>
                 </div>
                 <div className='order-summary review'>
-                    <button className='review-btn'>Review your order</button>
+                    <Link to='/review' ><button className='review-btn'>Review Order</button></Link>
                 </div>
             </div>
             

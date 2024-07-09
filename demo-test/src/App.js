@@ -16,7 +16,7 @@ function App() {
         </nav>
         <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
+        <Route path='/about' element={<About name="khan saheb" />}/>
         </Routes>
       </div>
     </Router>
@@ -26,8 +26,8 @@ function Home() {
   return <h2>Home</h2>;
 }
 
-function About() {
-  return <h2>About</h2>;
+function About(props) {
+  return <h2>About {props.name} </h2>;
 }
 
 export default App;
