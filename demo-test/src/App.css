@@ -1,21 +1,7 @@
 .App {
   text-align: center;
 }
-nav
-{
-  text-align: center;
-  line-height: 40px;
-  background-color: black;
-  color: white;
-}
-nav a{
-  line-height: 20px;
-  text-decoration: none;
-  color:white;
-  margin-right: 40px;
-  font-size: 30px;
-  font-weight: bold;
-}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
