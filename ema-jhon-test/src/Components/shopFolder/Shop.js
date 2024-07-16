@@ -7,15 +7,11 @@ const Shop = () => {
     const [data, setData] = useState([]);
     const [cart, setCart] = useState([]);
 
-    // Function to handle adding products to the cart
     const handleAddCart = (addedPro) => {
         const newCart = [...cart, addedPro];
         setCart(newCart);
 
-        // Persist cart state in local storage
         localStorage.setItem('cart', JSON.stringify(newCart));
-
-        // Code to update local storage with product key and quantity
         const productKey = addedPro.key;
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
         if (cartItems[productKey]) {
