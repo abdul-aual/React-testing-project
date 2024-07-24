@@ -1,7 +1,7 @@
 import React from 'react';
 import calculation from './calculation.css';
 const Calculation = (props) => {
-    const{id,name,image,phone,email,salary} = props.allDetails;
+    const{name,image,phone,email,salary} = props.allDetails;
     return (
         <div>
              <div>

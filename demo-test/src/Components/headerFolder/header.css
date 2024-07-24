@@ -1,0 +1,14 @@
+.text-center{
+    text-align: center;
+}
+nav{
+    background-color: black;
+    line-height: 50px;
+}
+.header-link{
+    font-size: 20px;
+    margin-left: 20px;
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+}

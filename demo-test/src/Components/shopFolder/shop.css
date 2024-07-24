@@ -1,0 +1,16 @@
+.flex-div{
+    display: flex;
+}
+.width70{
+    width: 70%;
+}
+.width28{
+    width: 28%;
+}
+.property70{
+    margin-left: 30px;
+    border-right: 1px solid lightgray;
+}
+.property28{
+    padding-left: 5px;
+}

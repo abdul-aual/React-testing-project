@@ -1,0 +1,31 @@
+.products{
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+.color-salmon{
+    color:lightsalmon;
+}
+.btn{
+    padding: 0.5% 4%;
+    background-color: white;
+    border: 1px solid lightsalmon;
+    border-radius: 3px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.btn:hover{
+    border: 1px solid black;
+}
+.btn:active{
+    background-color: lightsalmon;
+    border: 1px dotted lightsalmon;
+    color:white
+}
+.name-link{
+    color:salmon;
+    text-decoration: none;
+}
+.name-link:hover{
+    text-decoration:underline;
+    color:rgb(237, 77, 14);
+}
