@@ -10,7 +10,6 @@ const Shop = () => {
     const first10 = data.slice(0, 10);
     const [products] = useState(first10);
     const [cart, setCart]= useState([]);
-console.log(cart);
     useEffect(() => {
         const savedCart = getStoredCart();
         const productKeys = Object.keys(savedCart);
@@ -25,7 +24,7 @@ console.log(cart);
     const handleAddProduct =(products)=>{
         const toBeAddedKey = products.key;
         const sameProduct = cart.find(pd=>pd.key===toBeAddedKey);
-        let count =1;
+        let count=1;
         let newCart;
         if(sameProduct){
              count = sameProduct.quantity + 1;
