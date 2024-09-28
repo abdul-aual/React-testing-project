@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    height: 50px;
+}
+.navbarLinks{
+    display: flex;
+    list-style: none;
+
+}
+.navbarItem{
+    margin: 5px;
+}
+ .navbarItem a{
+    color: white;
+    text-decoration: none;
+}
+.navbarItem a:hover{
+    text-decoration: underline;
+}
