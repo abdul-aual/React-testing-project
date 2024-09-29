@@ -1,0 +1,27 @@
+.product-main-div{
+    border-bottom: 1px solid gray;
+    display: flex;
+    margin-left: 3dvb;
+    padding-bottom: 1%;
+}
+.imgDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productDetails{
+    margin-left: 2.4%;
+}
+.buy-btn{
+    background-color: orange;
+    padding: 4px 10px;
+    border-radius: 3px;
+    color:black;
+    border: 1px dotted black;
+}
+.buy-btn:hover{
+    border: 1px solid black;
+    background-color: black;
+    color: orange;
+    cursor: pointer;
+}

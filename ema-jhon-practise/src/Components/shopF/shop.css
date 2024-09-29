@@ -1,0 +1,28 @@
+.mainDiv{
+    display: flex;
+}
+
+.product-container{
+    width: 75%;
+    border: 1px solid gray;
+}
+
+.cart-container {
+    width: 24%;
+    padding-top: 3vh;
+}
+
+.text-center {
+    text-align: center;
+}
+.calculation-div{
+    display: flex;
+    margin-left: 3%;
+}
+.money{
+    padding-left: 12px;
+}
+.orderDiv{
+    display: flex;
+    justify-content: center;
+}
