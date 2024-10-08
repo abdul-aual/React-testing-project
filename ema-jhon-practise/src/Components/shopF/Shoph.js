@@ -3,6 +3,7 @@ import Products from '../ProductsF/Products';
 import fakeData from '../fakeData/findProducts.json';
 import './shop.css';
 import { Link } from 'react-router-dom';
+import { addToDb } from '../fakeData/fakedb';
 
 const Shoph = () => {
     const first10 = fakeData.slice(0,10);
@@ -12,6 +13,12 @@ const Shoph = () => {
     const handleButtonClick = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
+        
+
+        //new line added for database
+       const bal =  addToDb(product.key);
+
+
     };
 
     // Calculate total
@@ -35,7 +42,7 @@ const Shoph = () => {
     GT = Math.floor(GT.toFixed(2));
 
     const handleOrderBtn = () => {
-        console.log('ami order review re');
+    
     };
 
     return (
