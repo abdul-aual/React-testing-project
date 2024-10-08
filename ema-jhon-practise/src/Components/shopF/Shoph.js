@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import fakeData from '../fakeData/products.JSON';
+import React, { useState } from 'react';
 import Products from '../ProductsF/Products';
+import fakeData from '../fakeData/findProducts.json';
 import './shop.css';
+import { Link } from 'react-router-dom';
 
 const Shoph = () => {
-    const [products, setProducts] = useState([]);
+    const first10 = fakeData.slice(0,10);
+    const [products] = useState(first10);
     const [cart, setCart] = useState([]);
-
-    useEffect(() => {
-        fetch(fakeData)
-            .then(response => response.json())
-            .then(data => {
-                const first20 = data.slice(0, 20);
-                setProducts(first20);
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    }, []);
 
     const handleButtonClick = (product) => {
         const newCart = [...cart, product];
@@ -29,7 +21,6 @@ const Shoph = () => {
         total = total + product.price;
     }
 
-    // Calculate shipping and tax
     let shipping = 0;
     if (total > 0) {
         shipping = 3;
@@ -38,7 +29,6 @@ const Shoph = () => {
     let tax = total * 0.05;
     let GT = total + tax + shipping;
 
-    // Convert values to two decimal places
     total = total.toFixed(2);
     shipping = shipping.toFixed(2);
     tax = tax.toFixed(2);
@@ -54,6 +44,7 @@ const Shoph = () => {
                 {products.map((product, key) => (
                     <Products
                         handleButtonClick={handleButtonClick}
+                        showBuyNowBtn = {true}
                         products={product}
                         key={key}
                     />
@@ -82,9 +73,7 @@ const Shoph = () => {
                 </div>
 
                 <div className='orderDiv'>
-                    <button onClick={handleOrderBtn} className='buy-btn'>
-                        Review Your Order
-                    </button>
+                    <Link to='/order'><button onClick={handleOrderBtn} className='buy-btn'>Review Your Order</button></Link>
                 </div>
             </div>
         </div>
