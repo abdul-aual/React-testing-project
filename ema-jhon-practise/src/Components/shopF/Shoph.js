@@ -1,40 +1,50 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Products from '../ProductsF/Products';
 import fakeData from '../fakeData/findProducts.json';
 import './shop.css';
 import { Link } from 'react-router-dom';
-import { addToDb } from '../fakeData/fakedb';
+import { addToDb, getStoredCart } from '../fakeData/fakedb'; // Make sure to import getStoredCart
 
 const Shoph = () => {
-    const first10 = fakeData.slice(0,10);
+    const first10 = fakeData.slice(0, 10);
     const [products] = useState(first10);
     const [cart, setCart] = useState([]);
+
+    useEffect(() => {
+        // Load the cart from local storage when the component mounts
+        const storedCart = getStoredCart();
+        const cartItems = [];
+
+        for (const key in storedCart) {
+            const product = fakeData.find(pd => pd.key === key);
+            if (product) {
+                const quantity = storedCart[key];
+                // Push the product with the quantity to the cart array
+                for (let i = 0; i < quantity; i++) {
+                    cartItems.push(product);
+                }
+            }
+        }
+
+        setCart(cartItems);
+    }, []);
 
     const handleButtonClick = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
-        
-
-        //new line added for database
-       const bal =  addToDb(product.key);
-
-
+        addToDb(product.key); // Save the product to local storage
     };
 
     // Calculate total
     let total = 0;
     for (let i = 0; i < cart.length; ++i) {
         const product = cart[i];
-        total = total + product.price;
+        total += product.price;
     }
 
-    let shipping = 0;
-    if (total > 0) {
-        shipping = 3;
-    }
-
-    let tax = total * 0.05;
-    let GT = total + tax + shipping;
+    let shipping = total > 0 ? 3 : 0; // Shipping fee
+    let tax = total * 0.05; // Tax calculation
+    let GT = total + tax + shipping; // Grand total
 
     total = total.toFixed(2);
     shipping = shipping.toFixed(2);
@@ -42,7 +52,7 @@ const Shoph = () => {
     GT = Math.floor(GT.toFixed(2));
 
     const handleOrderBtn = () => {
-    
+        // Any specific logic when the order button is clicked
     };
 
     return (
@@ -51,7 +61,7 @@ const Shoph = () => {
                 {products.map((product, key) => (
                     <Products
                         handleButtonClick={handleButtonClick}
-                        showBuyNowBtn = {true}
+                        showBuyNowBtn={true}
                         products={product}
                         key={key}
                     />
@@ -80,7 +90,9 @@ const Shoph = () => {
                 </div>
 
                 <div className='orderDiv'>
-                    <Link to='/order'><button onClick={handleOrderBtn} className='buy-btn'>Review Your Order</button></Link>
+                    <Link to='/order'>
+                        <button onClick={handleOrderBtn} className='buy-btn'>Review Cart</button>
+                    </Link>
                 </div>
             </div>
         </div>
