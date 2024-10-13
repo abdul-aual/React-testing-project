@@ -1,0 +1,31 @@
+.div-container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    
+}
+
+.list-container {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the list items horizontally */
+    gap: 20px; /* Add space between the links */
+    
+}
+
+.list-items {
+    font-size: 18px;
+
+}
+
+.list-items a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.list-items a:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}

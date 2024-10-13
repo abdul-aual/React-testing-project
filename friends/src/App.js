@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './components/headerF/Navbar';
+import Header from './components/headerF/Header';
+import Allfriends from './components/friendsF/Allfriends';
+import VisitedF from './components/friendsF/VisitedF';
+import CurrentF from './components/friendsF/CurrentF';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Header />
+        <Navbar />
+        <Routes>
+          <Route path='/allfriends' element={<Allfriends/>}></Route>
+          <Route path='/visited' element={<VisitedF/>}> </Route>
+          <Route path='/current' element={<CurrentF/>}> </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
