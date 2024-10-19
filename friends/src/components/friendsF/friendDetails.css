@@ -1,0 +1,14 @@
+.friend-details {
+    border: 1px solid lightgray;
+    padding: 20px;
+    height: 400px;
+    width: 50%;
+    background-color: lightgray;
+    color: black; /* Ensure text is visible on a black background */
+    margin: 20px auto; /* Center the div horizontally */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+.friend-details p {
+    margin: 7px 0; /* Add spacing between the paragraphs */
+}
